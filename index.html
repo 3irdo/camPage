@@ -45,8 +45,7 @@
                 <div class="navbar-brand">
                     <span class="navbar-logo">
                         <a href="https://mobirise.com">
-                            <img src="assets/images/cam_logo.jpg" alt="Mobirise Website Builder"
-                                style="height: 3rem;">
+                            <img src="assets/images/cam_logo.jpg" alt="Mobirise Website Builder" style="height: 3rem;">
                         </a>
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-4"
@@ -79,79 +78,98 @@
                     </ul>
                 </div>
 
-                    <!-- formularo ----------------registro----------------- -->
+                <!-- registro ---------------------------------------------------- -->
 
-                    <div class="modal fade" id="register_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Regístrate</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="register_form">
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">Usuario</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label" >correo</label>
-                                            <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" id="btn_send-register" class="btn btn-primary">enviar</button>
-                                </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rModal"
+                    data-bs-whatever="@mdo">Registrarse</button>
+
+                <div class="modal fade" id="rModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="RModalLabel">Nuevo Registro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="rForm" class="needs-validation">
+                                    <div class="mb-3">
+                                        <label for="rName" class="col-form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="rName" required>
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                            Por favor, elije un nombre de usuario.
+                                          </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="rEmail" class="col-form-label">Email</label>
+                                        <input type="email" class="form-control" id="rEmail" required>
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                            Por favor ingresa un correo de válido.
+                                          </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="rPass" class="col-form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="rPass" required>
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                            ingresa una contraseña.
+                                          </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="r_btn" data-bs-dismiss="modal">Enviar</button>
                             </div>
                         </div>
                     </div>
-                    
-                    <button type="button" class="btn btn-primary send_register" data-bs-toggle="modal" data-bs-target="#register_modal">Registrarse</button>
+                </div>
 
-                <!-- login ---------------------------------------------------------- -->
 
-                    <div class="modal fade" id="login_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="login-form">
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">Usuario</label>
-                                            <input type="text" class="form-control" id="l-email" placeholder="ejemplo@gmail.com">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="l-password" placeholder="Contraseña">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Iniciar sesión</button>
-                                </div>
+                <!-- login ---------------------------------------------------- -->
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lModal"
+                    data-bs-whatever="@mdo">Inicia sesión</button>
+
+                <div class="modal fade" id="lModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="lModalLabel">Nuevo Registro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="lForm" class="needs-validation">
+                                    <div class="mb-3">
+                                        <label for="lEmail" class="col-form-label">Email</label>
+                                        <input type="email" class="form-control" id="lEmail" >
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                            Ingresa tu correo registrado.
+                                          </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="lPass" class="col-form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="lPass">
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                            Ingresa tu contraseña actual.
+                                          </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary" id="l_btn" data-bs-dismiss="modal">iniciar</button>
                             </div>
                         </div>
                     </div>
-                    
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login_modal">Login</button>
-                    
-
-                      
-                  <!-- ---------------------------------------- -->
+                </div>
+                <!-- ---------------------------------------- -->
 
 
-                
-           
+
+
         </nav>
     </section>
 
@@ -169,7 +187,7 @@
                     <p class="mbr-text mbr-fonts-style mb-4 display-7">¿Has soñado con ser un arquero? <br> Únete al
                         Club Arquería de la Montaña.
                     </p>
-                   
+
                 </div>
             </div>
             <div class="row mt-5 justify-content-center">
@@ -278,7 +296,8 @@
                 <div class="col-12 content-head">
                     <div class="mbr-section-head mb-5">
                         <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2">
-                            <strong>Galería</strong></h3>
+                            <strong>Galería</strong>
+                        </h3>
                         <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Aquí los
                             mejores momentos que hemos cazado</h4>
                     </div>
@@ -456,7 +475,8 @@
                     <h1 class="mbr-section-title mbr-fonts-style display-1"><strong>Nuestro espacio</strong>
                     </h1>
                     <p class="mbr-text mbr-fonts-style mt-4 display-7">
-                        Te ofrecemos todas las comodidades para practicar <br> equipamento y campo de tiro indoor y al aire libre.
+                        Te ofrecemos todas las comodidades para practicar <br> equipamento y campo de tiro indoor y al
+                        aire libre.
                     </p>
 
                 </div>
@@ -468,32 +488,7 @@
         </div>
     </section>
 
-    <section data-bs-version="5.1" class="header1 cid-tJS9vXDdRK" id="header01-7">
-
-
-
-
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-12 col-lg-7 image-wrapper">
-                    <img class="w-100" src="assets/images/gallery01.jpg" alt="Mobirise Website Builder">
-                </div>
-                <div class="col-12 col-lg col-md-12">
-                    <div class="text-wrapper align-left">
-                        <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>About us</strong></h1>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-7">
-                            Most blocks can be used with various types of backgrounds: color, pictures, or videos. It
-                            can be set in Block Parameters.&nbsp;You can show/hide the title, subtitle, text, button in
-                            the Block Parameters (blue gear icon at the top right corner of the block).&nbsp;</p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-7"
-                                href="https://mobiri.se">Comienza Ahora</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
 
 
     <section data-bs-version="5.1" class="form5 cid-tO692sXGiV" id="form02-1i">
@@ -556,7 +551,7 @@
         <p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1"
             href="https://mobirise.com/builder/html-code-generator.html">HTML Code Creator</a>
     </section>
-    <script src="form.js"></script>
+    <script src="register.js"></script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/smoothscroll/smooth-scroll.js"></script>
     <script src="assets/ytplayer/index.js"></script>
@@ -566,7 +561,7 @@
     <script src="assets/theme/js/script.js"></script>
     <script src="assets/gallery/player.min.js"></script>
     <script src="assets/gallery/script.js"></script>
-    <script src="assets/formoid/formoid.min.js"></script> -->
+    <script src="assets/formoid/formoid.min.js"></script>
 
 
     <!-- <input name="animation" type="hidden">
