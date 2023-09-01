@@ -44,7 +44,6 @@ window.onload = () => {
 // -----------------------login---------------------------------
 
   const lBtn = document.getElementById("l_btn");
-
   lBtn.addEventListener("click", function (e) {
     e.preventDefault();
     const lEmail = document.getElementById("lEmail").value.toLowerCase();
@@ -57,6 +56,9 @@ window.onload = () => {
     } else {
       alert(`Bienvenido ${validUser.name}`);
       localStorage.setItem("login_success", validUser.name);
+      let lOutSwitcher = document.getElementById("logout_switcher");
+      lOutSwitcher.textContent = "Logout";
+      
     }
   });
 };
