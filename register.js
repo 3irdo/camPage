@@ -58,7 +58,6 @@ window.onload = () => {
       localStorage.setItem("login_success", validUser.name);
       let lOutSwitcher = document.getElementById("logout_switcher");
       lOutSwitcher.textContent = "Logout";
-      
     }
   });
 };
